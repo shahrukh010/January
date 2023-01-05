@@ -11,6 +11,16 @@ public class MainJan{
 
         boolean res = jan.wordPattern(pattern,word);
         System.out.println(res);
+
+        System.out.println();
+        System.out.println();
+
+        //String input = "GOOGLE";//true
+//        String input = "google";//true
+        String input = "GooGle";//false(because of not all small or not all caps
+
+        
+        System.out.println(jan.detectCapitalUse(input));
         
     }
 

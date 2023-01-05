@@ -38,4 +38,32 @@ public class Jan{
         return true;
     }
 
+    public boolean detectCapitalUse(String string){
+
+        if(string.length()==0 || string.length()==1)return false;
+
+        if(Character.isUpperCase(string.charAt(0))){
+
+            boolean firstUpperChar = Character.isUpperCase(string.charAt(1));
+
+            for(int index = 2; index < string.length(); index++){
+
+                boolean secondUpperChar = Character.isUpperCase(string.charAt(index));
+
+                if(firstUpperChar !=secondUpperChar)return false;
+            }
+        }
+        else{
+            
+            for(int index = 0; index < string.length(); index++){
+
+                if(Character.isUpperCase(string.charAt(index)))return false;
+            }
+        }
+        return true;
+
+    }
+
+
+
 }
